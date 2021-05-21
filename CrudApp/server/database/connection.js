@@ -6,6 +6,10 @@ const connectDB = async()=>{
             // userNewUrlParser:true,
             // useUnifiedTopology:true,
             // useFindAndMondify:false,
+
+
+
+            // bhaiyaaaa ek config filee thii ptaaani khaa gieee ussssi mei tha mongo ka port ka hahahahahahah ese kaise khi chli gyi
             // useCreateIndex:true
             useUnifiedTopology:true,
             useNewUrlParser: true
