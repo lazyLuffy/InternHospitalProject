@@ -14,7 +14,7 @@
             <nav>
                 <div class="container">
                     <div class="text-center">
-                        <a href="/" class="nav-brand text -dark">User Management System</a>
+                        <a href="/" class="nav-brand text -dark">Hospital Admit Form</a>
                     </div>
                 </div>
             </nav>
@@ -25,45 +25,44 @@
         <main id="site-main">
             <div class="container">
                 <div class="box-nav d-flex justify-between">
-                    <a href="/"><i class="fas fa-angle-double-left"></i> Users</a>
+                    <a href="/"><i class="fas fa-angle-double-left"></i>Patients</a>
                 </div>
                 <div class="form-title text-center">
-                    <h2 class="text-dark">Update User
+                    <h2 class="text-dark">New Patient
                     </h2>
-                    <span class="text-light">Use the below form to update an account</span>
+                    <span class="text-light">Use the below form to Get Admit</span>
                 </div>
         <!-- form handling -->
-                <form id="update_user" method="POST">
+                <form action="/api/users" id="add_user" method="POST">
                     <div id="new_user">
-                        
                         <div class="form-group">
-                            <label for="name" class="text-light">Name</label>
-                            <input type="hidden" name="id" value="<%= user._id%>">
-                            <input type="text" name="name" value="<%= user.name%>" 
+                            <label for="Name" class="text-light">Name</label>
+                            <!-- <input type="hidden" name="id" value=""> -->
+                            <input type="text" name="name" value="" placeholder="Jatin Adhikari">
                         </div>
                         <div class="form-group">
                             <label for="Email" class="text-light">Email</label>
-                            <input type="text" name="Email" value="<%= user.email%>" 
+                            <input type="text" name="email" value="" placeholder="JatinAdhikari@gmal.com">
                         </div>
                         <div class="form-group">
-                            <label for="gender" class="text-light">Gender</label>
+                            <label for="Gender" class="text-light">Gender</label>
                             <div class="radio inline">
-                                <input type="radio" id="radio-2" name="gender" value="Male"<%= user.gender == "male"?'checked':''%>>
+                                <input type="radio" id="radio-2" name="gender"value="male">
                                 <label for="radio-2" class="radio-label">Male</label>
                             </div>
                             <div class="radio inline">
-                                <input type="radio" id="radio-3" name="gender" value="female" <%= user.gender == "female"?'checked':''%>>
+                                <input type="radio" id="radio-3" name="gender"value="female">
                                 <label for="radio-3" class="radio-label">female</label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="gender" class="text-light">Status</label>
+                            <label for="status" class="text-light">Covid Status</label>
                             <div class="radio inline">
-                                <input type="radio" id="radio-4" name="status" value="Active" <%= user.status == "active"?'checked':''%>>
+                                <input type="radio" id="radio-4" name="status" value="Active">
                                 <label for="radio-4" class="radio-label">Active</label>
                             </div>
                             <div class="radio inline">
-                                <input type='radio' id="radio-5" name="status" value="Inactive" <%= user.status == "inactive"?'checked':''%>>
+                                <input type='radio' id="radio-5" name="status" value="Inactive">
                                 <label for="radio-5" class="radio-label">inactive</label>
                             </div>
                         </div>
@@ -74,7 +73,7 @@
                 </form>
             </div>
         </main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
 <script src="js/index.js"></script>
 </body>
 </html>

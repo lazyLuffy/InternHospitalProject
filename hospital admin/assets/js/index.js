@@ -1,5 +1,5 @@
 $('#add_user').submit(function (event){
-    alert('data is subitted')
+    alert('Patient Successfully Admit')
 })
 
 $('#update_user').submit(function (event){
@@ -32,9 +32,9 @@ if(window.location.pathname=="/")
             "url": `/api/users/${id}`,
             "method":"delete",
         }
-        if(confirm("Do you reallly want to delete this data")){
+        if(confirm("congratulations now you negative")){
             $.ajax(request).done(function(response){
-                alert("Data deleted Successfully")
+                alert("Patient is Discharge now")
                 location.reload();
             })
         }
